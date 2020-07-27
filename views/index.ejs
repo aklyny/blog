@@ -1,0 +1,21 @@
+<%- include('partials/header.ejs');  %>
+
+
+
+<h1>U ARE IN /BLOG</h1>
+
+
+
+<% blogs.forEach(function(val){ %>
+  <div>
+	<h1><%= val.title %></h1>
+	<img src=" <%= val.image %>">
+	<h1> <%= val.body.substring(0,100)%> </h1>
+	<span><%= val.created%> </span>
+	<a href="/blogs/<%= val._id %>">Read More</a>
+  </div>
+<% }) %>
+
+
+
+<%- include('partials/footer.ejs');  %>
